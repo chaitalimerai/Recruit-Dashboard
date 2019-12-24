@@ -1,18 +1,639 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<style>
-body
-{
-Background-color:red;
-}	
-</style>
-<title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Recruitment</title>
+  <!-- Font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
+
 <body>
+  <!-- Main Wrapper -->
+  <section id="main-wrapper" class="main-wrapper">
+    <!-- Sidebar -->
+    <input type="radio" name="sidebar-toggler" id="sidebar-toggler">
+    <input type="radio" name="sidebar-toggler" id="dismiss-toggler">
+    <aside id="primary-nav" class="primary-nav">
+      <div class="nav-header">
+        <img src="./assets/image/logo.png" class="Logo" class="brand-logo">
+        <label for="dismiss-toggler">
+          <span class="fa fa-times fa-lg dismiss-toggler"></span>
+        </label>
+      </div>
+      <nav class="nav-content">
+        <ul class="nav">
+          <li>
+            <a class="nav-link">
+              <span class="nav-icon fa fa-instagram fa-lg" aria-hidden="true"></span>
+              <span class="nav-list-item">Overview</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link active">
+              <span class="nav-icon fa fa-user-o fa-lg" aria-hidden="true"></span>
+              <span class="nav-list-item">Recruit</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link">
+              <span class="nav-icon fa fa-clock-o fa-lg" aria-hidden="true"></span>
+              <span class="nav-list-item">Remainder</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link">
+              <span class="nav-icon fa fa-comment-o fa-lg" aria-hidden="true"></span>
+              <span class="nav-list-item">Message</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link">
+              <span class="nav-icon fa fa-bolt fa-lg" aria-hidden="true"></span>
+              <span class="nav-list-item">Estimate</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link">
+              <span class="nav-icon fa fa-cog fa-lg" aria-hidden="true"></span>
+              <span class="nav-list-item">Setting</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-footer">
+        <a class="nav-link">
+          <span class="nav-icon fa fa-sign-out fa-lg" aria-hidden="true"></span>
+          <span class="nav-list-item">Logout</span>
+        </a>
+      </div>
+    </aside>
+    <!-- End: Sidebar -->
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+    <!-- Wrapper -->
+    <section id="wrapper">
+      <!-- Main Header -->
+      <header class="main-header" id="main-header">
+        <ul class="nav">
+          <li class="nav-item">
+            <label for="sidebar-toggler">
+              <span class="fa fa-bars fa-lg sidebar-toggler mr-1"></span>
+            </label>
+            <span class="fa fa-search fa-lg search-icon"></span>
+            <div class="searchbox" id="searchbox">
+              <div><span>Voice Artist</span></div>
+              <div class="close-bg">
+                <span class="fa fa-times"></span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="nav">
+          <li class="nav-item dropdown shadow">
+            <div class="dropdown-toggle">
+              <img src="./assets/image/user-profile.png" class="user-profile" class="User Profile">
+            </div>
+            <input type="checkbox" id="label-split-icon">
+            <label for="label-split-icon" class="label-split-icon">
+              <span class="user-label">Benjamin Duncan</span>
+              <span class="fa fa-angle-down fa-lg down-icon"></span>
+            </label>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Benjamin Duncan</a>
+              <a class="dropdown-item" href="#">Sally Willis</a>
+              <a class="dropdown-item" href="#">Lilly Thronton</a>
+            </div>
+          </li>
+        </ul>
+      </header>
+      <!-- End: Main Header -->
 
+      <!-- Main Content -->
+      <main id="content-wrapper" class="content-wrapper">
+        <!-- Content Header -->
+        <div class="content-header">
+          <div>
+            <h4 class="title">45 Results found</h4>
+          </div>
+          <div class="filter-box">
+            <div class="dropdown shadow">
+              <input type="checkbox" id="label-filter">
+              <label for="label-filter" class="label-filter">
+                <span class="filter-label-text">Filter</span>
+                <span class="fa fa-angle-down fa-lg down-icon"></span>
+              </label>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Monday</a>
+                <a class="dropdown-item" href="#">Tuesday</a>
+                <a class="dropdown-item" href="#">Wednesday</a>
+              </div>
+            </div>
+            <div class="radio-group">
+              <input type="radio" name="display-card" id="display-grid" checked="checked">
+              <label for="display-grid" class="display-grid-label active">
+                <span class="fa fa-th-large fa-lg grid-icon"></span>
+                <span class="grid-text">Cards</span>
+              </label>
+              <input type="radio" name="display-card" id="display-table">
+              <label for="display-table" class="display-grid-label">
+                <span class="fa fa-bars fa-lg grid-icon"></span>
+                <span class="grid-text">Table</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- End: Content Header -->
+
+        <!-- Content Body -->
+        <div class="content-body">
+          <div class="row">
+            <div class="col">
+              <div class="card cards">
+                <div class="card-header">
+                  <div class="card-img">
+                    <img src="./assets/image/user-profile.png" alt="Joel Henderson">
+                  </div>
+                  <div class="header-right-content">
+                    <h4 class="card-title">Joel Henderson</h4>
+                    <div class="d-flex">
+                      <div class="badge">
+                        $230
+                      </div>
+                      <span class="vertical-line"></span>
+                      <div class="sub-title">Not Negotiate</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-content-body">
+                  <div class="rating-row">
+                    <span class="rating">9.7 RATING</span>
+                    <div class="progressbar">
+                      <div class="progressbar-1"></div>
+                    </div>
+                    <input type="checkbox" id="like-btn1">
+                    <label for="like-btn1" class="like-btn-label" id="like-btn-label1">
+                      <span class="fa fa-heart-o heart-icon"></span>
+                    </label>
+                  </div>
+                  <div class="roles-row">
+                    <h4 class="card-sub-title">ROLES</h4>
+                    <div class="radio-group">
+                      <input type="radio" name="role-option" id="camera-operator">
+                      <label for="camera-operator" class="role-options-label">
+                        <span>Camera operator</span>
+                      </label>
+                      <input type="radio" name="role-option" id="photographer" checked="checked">
+                      <label for="photographer" class="role-options-label active">
+                        <span>Photographer</span>
+                      </label>
+                      <input type="radio" name="role-option" id="director-photography">
+                      <label for="director-photography" class="role-options-label">
+                        <span>Director of photography</span>
+                      </label>
+                      <input type="radio" name="role-option" id="more-roles">
+                      <label for="more-roles" class="role-options-label">
+                        <span>+5 more roles</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="ask-people-row">
+                    <h4 class="card-sub-title">ASK PEOPLE</h4>
+                    <div class="client-list">
+                      <div class="d-flex">
+                        <img src="./assets/image/user-profile.png" class="client-img" alt="Client-1">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-1" alt="Client-2">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-2" alt="Client-3">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-3" alt="Client-4">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-4" alt="Client-5">
+                        <!-- <span class="client-img client-img-pos-5"></span> -->
+                        <span class="more-img">+6</span>
+                      </div>
+                      <div>
+                        <h5 class="client-title">10 clients in the list</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="button-group">
+                    <button type="submit" class="form-control">BOOK NOW</button>
+                    <button type="submit" class="form-control">PENCIL</button>
+                  </div>
+                  <div class="button-group">
+                    <button type="submit" class="form-control btn-large">CHECK AVAILIBILITY</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card cards">
+                <div class="card-header">
+                  <div class="card-img">
+                    <img src="./assets/image/user-profile.png" alt="Joel Henderson">
+                  </div>
+                  <div class="header-right-content">
+                    <h4 class="card-title">Joel Henderson</h4>
+                    <div class="d-flex">
+                      <div class="badge">
+                        $230
+                      </div>
+                      <span class="vertical-line"></span>
+                      <div class="sub-title">Not Negotiate</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-content-body">
+                  <div class="rating-row">
+                    <span class="rating">9.7 RATING</span>
+                    <div class="progressbar">
+                      <div class="progressbar-2"></div>
+                    </div>
+                    <input type="checkbox" id="like-btn2">
+                    <label for="like-btn2" class="like-btn-label" id="like-btn-label2">
+                      <span class="fa fa-heart-o heart-icon"></span>
+                    </label>
+                  </div>
+                  <div class="roles-row">
+                    <h4 class="card-sub-title">ROLES</h4>
+                    <div class="radio-group">
+                      <input type="radio" name="role-option2" id="executive-singer" checked="checked">
+                      <label for="executive-singer" class="role-options-label">
+                        <span>Executive-singer</span>
+                      </label>
+                      <input type="radio" name="role-option2" id="record artist">
+                      <label for="record artist" class="role-options-label active">
+                        <span>Record artist</span>
+                      </label>
+                      <input type="radio" name="role-option2" id="pro-cut">
+                      <label for="pro-cut" class="role-options-label">
+                        <span>Pro-cut</span>
+                      </label>
+                      <input type="radio" name="role-option2" id="more-roles">
+                      <label for="more-roles" class="role-options-label">
+                        <span>+5 more roles</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="ask-people-row">
+                    <h4 class="card-sub-title">ASK PEOPLE</h4>
+                    <div class="client-list">
+                      <div class="d-flex">
+                        <img src="./assets/image/user-profile.png" class="client-img" alt="Client-1">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-1" alt="Client-2">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-2" alt="Client-3">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-3" alt="Client-4">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-4" alt="Client-5">
+                        <!-- <span class="client-img client-img-pos-5"></span> -->
+                        <span class="more-img">+6</span>
+                      </div>
+                      <div>
+                        <h5 class="client-title">10 clients in the list</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="button-group">
+                    <button type="submit" class="form-control">BOOK NOW</button>
+                    <button type="submit" class="form-control">PENCIL</button>
+                  </div>
+                  <div class="button-group">
+                    <button type="submit" class="form-control btn-large">CHECK AVAILIBILITY</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card cards">
+                <div class="card-header">
+                  <div class="card-img">
+                    <img src="./assets/image/user-profile.png" alt="Joel Henderson">
+                  </div>
+                  <div class="header-right-content">
+                    <h4 class="card-title">Joel Henderson</h4>
+                    <div class="d-flex">
+                      <div class="badge">
+                        $230
+                      </div>
+                      <span class="vertical-line"></span>
+                      <div class="sub-title">Not Negotiate</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-content-body">
+                  <div class="rating-row">
+                    <span class="rating">9.7 RATING</span>
+                    <div class="progressbar">
+                      <div class="progressbar-1"></div>
+                    </div>
+                    <input type="checkbox" id="like-btn3" checked>
+                    <label for="like-btn3" class="like-btn-label" id="like-btn-label3">
+                      <span class="fa fa-heart-o heart-icon"></span>
+                    </label>
+                  </div>
+                  <div class="roles-row">
+                    <h4 class="card-sub-title">ROLES</h4>
+                    <div class="radio-group">
+                      <input type="radio" name="role-option3" id="designer">
+                      <label for="designer" class="role-options-label">
+                        <span>Designer</span>
+                      </label>
+                      <input type="radio" name="role-option3" id="programmer" checked="checked">
+                      <label for="programmer" class="role-options-label active">
+                        <span>Programmer</span>
+                      </label>
+                      <input type="radio" name="role-option3" id="tester">
+                      <label for="tester" class="role-options-label">
+                        <span>Tester</span>
+                      </label>
+                      <input type="radio" name="role-option3" id="freelancer">
+                      <label for="freelancer" class="role-options-label">
+                        <span>Freelancer</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="ask-people-row">
+                    <h4 class="card-sub-title">ASK PEOPLE</h4>
+                    <div class="client-list">
+                      <div class="d-flex">
+                        <img src="./assets/image/user-profile.png" class="client-img" alt="Client-1">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-1" alt="Client-2">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-2" alt="Client-3">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-3" alt="Client-4">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-4" alt="Client-5">
+                        <!-- <span class="client-img client-img-pos-5"></span> -->
+                        <span class="more-img">+6</span>
+                      </div>
+                      <div>
+                        <h5 class="client-title">10 clients in the list</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="button-group">
+                    <button type="submit" class="form-control">BOOK NOW</button>
+                    <button type="submit" class="form-control">PENCIL</button>
+                  </div>
+                  <div class="button-group">
+                    <button type="submit" class="form-control btn-large">CHECK AVAILIBILITY</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card cards">
+                <div class="card-header">
+                  <div class="card-img">
+                    <img src="./assets/image/user-profile.png" alt="Joel Henderson">
+                  </div>
+                  <div class="header-right-content">
+                    <h4 class="card-title">Joel Henderson</h4>
+                    <div class="d-flex">
+                      <div class="badge">
+                        $230
+                      </div>
+                      <span class="vertical-line"></span>
+                      <div class="sub-title">Not Negotiate</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-content-body">
+                  <div class="rating-row">
+                    <span class="rating">9.7 RATING</span>
+                    <div class="progressbar">
+                      <div class="progressbar-3"></div>
+                    </div>
+                    <input type="checkbox" id="like-btn4">
+                    <label for="like-btn4" class="like-btn-label" id="like-btn-label4">
+                      <span class="fa fa-heart-o heart-icon"></span>
+                    </label>
+                  </div>
+                  <div class="roles-row">
+                    <h4 class="card-sub-title">ROLES</h4>
+                    <div class="radio-group">
+                      <input type="radio" name="role-option4" id="camera-operator2">
+                      <label for="camera-operator2" class="role-options-label">
+                        <span>Camera operator</span>
+                      </label>
+                      <input type="radio" name="role-option4" id="photographer2" checked="checked">
+                      <label for="photographer2" class="role-options-label active">
+                        <span>Photographer</span>
+                      </label>
+                      <input type="radio" name="role-option4" id="director-photography3">
+                      <label for="director-photography3" class="role-options-label">
+                        <span>Director of photography</span>
+                      </label>
+                      <input type="radio" name="role-option4" id="more-roles2">
+                      <label for="more-roles2" class="role-options-label">
+                        <span>+5 more roles</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="ask-people-row">
+                    <h4 class="card-sub-title">ASK PEOPLE</h4>
+                    <div class="client-list">
+                      <div class="d-flex">
+                        <img src="./assets/image/user-profile.png" class="client-img" alt="Client-1">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-1" alt="Client-2">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-2" alt="Client-3">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-3" alt="Client-4">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-4" alt="Client-5">
+                        <!-- <span class="client-img client-img-pos-5"></span> -->
+                        <span class="more-img">+6</span>
+                      </div>
+                      <div>
+                        <h5 class="client-title">10 clients in the list</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="button-group">
+                    <button type="submit" class="form-control">BOOK NOW</button>
+                    <button type="submit" class="form-control">PENCIL</button>
+                  </div>
+                  <div class="button-group">
+                    <button type="submit" class="form-control btn-large">CHECK AVAILIBILITY</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card cards">
+                <div class="card-header">
+                  <div class="card-img">
+                    <img src="./assets/image/user-profile.png" alt="Joel Henderson">
+                  </div>
+                  <div class="header-right-content">
+                    <h4 class="card-title">Joel Henderson</h4>
+                    <div class="d-flex">
+                      <div class="badge">
+                        $230
+                      </div>
+                      <span class="vertical-line"></span>
+                      <div class="sub-title">Not Negotiate</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-content-body">
+                  <div class="rating-row">
+                    <span class="rating">9.7 RATING</span>
+                    <div class="progressbar">
+                      <div class="progressbar-1"></div>
+                    </div>
+                    <input type="checkbox" id="like-btn5">
+                    <label for="like-btn5" class="like-btn-label" id="like-btn-label5">
+                      <span class="fa fa-heart-o heart-icon"></span>
+                    </label>
+                  </div>
+                  <div class="roles-row">
+                    <h4 class="card-sub-title">ROLES</h4>
+                    <div class="radio-group">
+                      <input type="radio" name="role-option5" id="camera-operator3">
+                      <label for="camera-operator3" class="role-options-label">
+                        <span>Camera operator</span>
+                      </label>
+                      <input type="radio" name="role-option5" id="photographer3" checked="checked">
+                      <label for="photographer3" class="role-options-label active">
+                        <span>Photographer</span>
+                      </label>
+                      <input type="radio" name="role-option5" id="director-photography3">
+                      <label for="director-photography3" class="role-options-label">
+                        <span>Director of photography</span>
+                      </label>
+                      <input type="radio" name="role-option5" id="more-roles3">
+                      <label for="more-roles3" class="role-options-label">
+                        <span>+5 more roles</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="ask-people-row">
+                    <h4 class="card-sub-title">ASK PEOPLE</h4>
+                    <div class="client-list">
+                      <div class="d-flex">
+                        <img src="./assets/image/user-profile.png" class="client-img" alt="Client-1">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-1" alt="Client-2">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-2" alt="Client-3">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-3" alt="Client-4">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-4" alt="Client-5">
+                        <!-- <span class="client-img client-img-pos-5"></span> -->
+                        <span class="more-img">+6</span>
+                      </div>
+                      <div>
+                        <h5 class="client-title">10 clients in the list</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="button-group">
+                    <button type="submit" class="form-control">BOOK NOW</button>
+                    <button type="submit" class="form-control">PENCIL</button>
+                  </div>
+                  <div class="button-group">
+                    <button type="submit" class="form-control btn-large">CHECK AVAILIBILITY</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card cards">
+                <div class="card-header">
+                  <div class="card-img">
+                    <img src="./assets/image/user-profile.png" alt="Joel Henderson">
+                  </div>
+                  <div class="header-right-content">
+                    <h4 class="card-title">Joel Henderson</h4>
+                    <div class="d-flex">
+                      <div class="badge">
+                        $230
+                      </div>
+                      <span class="vertical-line"></span>
+                      <div class="sub-title">Not Negotiate</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-content-body">
+                  <div class="rating-row">
+                    <span class="rating">9.7 RATING</span>
+                    <div class="progressbar">
+                      <div class="progressbar-1"></div>
+                    </div>
+                    <input type="checkbox" id="like-btn6" checked>
+                    <label for="like-btn6" class="like-btn-label" id="like-btn-label6">
+                      <span class="fa fa-heart-o heart-icon"></span>
+                    </label>
+                  </div>
+                  <div class="roles-row">
+                    <h4 class="card-sub-title">ROLES</h4>
+                    <div class="radio-group">
+                      <input type="radio" name="role-option6" id="designer2">
+                      <label for="designer2" class="role-options-label">
+                        <span>Designer</span>
+                      </label>
+                      <input type="radio" name="role-option6" id="programmer2" checked="checked">
+                      <label for="programmer2" class="role-options-label active">
+                        <span>Programmer</span>
+                      </label>
+                      <input type="radio" name="role-option6" id="tester3">
+                      <label for="tester3" class="role-options-label">
+                        <span>Tester</span>
+                      </label>
+                      <input type="radio" name="role-option6" id="freelancer2">
+                      <label for="freelancer2" class="role-options-label">
+                        <span>Freelancer</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="ask-people-row">
+                    <h4 class="card-sub-title">ASK PEOPLE</h4>
+                    <div class="client-list">
+                      <div class="d-flex">
+                        <img src="./assets/image/user-profile.png" class="client-img" alt="Client-1">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-1" alt="Client-2">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-2" alt="Client-3">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-3" alt="Client-4">
+                        <img src="./assets/image/user-profile.png" class="client-img client-img-pos-4" alt="Client-5">
+                        <!-- <span class="client-img client-img-pos-5"></span> -->
+                        <span class="more-img">+6</span>
+                      </div>
+                      <div>
+                        <h5 class="client-title">10 clients in the list</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="button-group">
+                    <button type="submit" class="form-control">BOOK NOW</button>
+                    <button type="submit" class="form-control">PENCIL</button>
+                  </div>
+                  <div class="button-group">
+                    <button type="submit" class="form-control btn-large">CHECK AVAILIBILITY</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card cards">
+                <img src="./assets/image/card.png" alt="Pro Version" style="height: 440px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End: Content Body -->
+      </main>
+      <!-- End: Main Content -->
+    </section>
+    <!-- End: Wrapper -->
+  </section>
+  <!-- End: Main Wrapper -->
 </body>
+
 </html>

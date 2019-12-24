@@ -1,0 +1,24 @@
+.mr-1
+{
+  margin-right: 20px;
+}
+
+.ml-auto
+{
+  margin: 0 auto;
+}
+
+.d-flex
+{
+  @include flex-properties(flex, null, null, null, null);
+}
+
+.flex-column
+{
+  @include flex-properties(flex, column, null, null, null);
+}
+
+.position-relative
+{
+  position: relative;
+}

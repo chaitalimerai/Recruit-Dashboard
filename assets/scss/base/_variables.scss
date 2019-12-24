@@ -1,0 +1,18 @@
+// All the SCSS Variables goes here
+
+// Font
+$font-family:  'Roboto', sans-serif;
+$font-size: 1rem;
+$font-line-height: 1.5;
+$font-weight: 400;
+
+// Header
+$header-height: 80px;
+
+//Breakpoints
+$breakpoints: (
+  "xl": 1200px,
+  "lg": 992px,
+  "md": 768px,
+  "sm": 576px
+);

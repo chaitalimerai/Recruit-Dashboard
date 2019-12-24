@@ -1,0 +1,184 @@
+/* =============Sidebar=============*/
+
+/*===============sidebar-toggler checked===============*/
+#sidebar-toggler:checked {
+  & ~ .primary-nav {
+    transform: translateX(0);
+    flex: 0 0 300px;
+    max-width: 300px;
+    position: fixed;
+    z-index: 10;
+  }
+}
+
+/*===============dismiss-toggler checked===============*/
+#dismiss-toggler:checked {
+  & ~ .primary-nav {
+    transform: translateX(0);
+
+    @media (max-width: map_get($breakpoints, "sm")) {
+      transform: translateX(-300px);
+    }
+  }
+}
+
+/*===============Nav-header on-checked Tablet Size===============*/
+@media (max-width: map_get($breakpoints, "md")) {
+  #sidebar-toggler:checked {
+    & ~ .primary-nav .nav-header {
+      padding: 50px 20px 30px 20px;
+      margin: 0;
+      @include flex-properties(flex, null, null, space-between, center);
+    }
+    & ~ .primary-nav .dismiss-toggler {
+      display: block;
+    }
+    & ~ .primary-nav .nav-content .nav-link .nav-list-item {
+      transform: translateX(0);
+      display: inline-block;
+      transition: all 0.5s ease-in-out;
+      margin: 0 20px;
+    }
+    & ~ .primary-nav .nav-content .nav-link {
+      display: inherit;
+    }
+    & ~ .primary-nav .nav-content .nav-link .nav-icon {
+      font-size: 18px;
+    }
+    & ~ .primary-nav .nav-footer .nav-link .nav-list-item {
+      transform: translateX(0);
+      display: inline-block;
+      transition: all 0.5s ease-in-out;
+      margin: 0 20px;
+    }
+  }
+}
+
+/* =============Primary Nav=============*/
+#primary-nav {
+  @extend %h-100;
+  @include flex-properties(flex, column, null, null, null);
+  flex: 0 0 250px;
+  max-width: 250px;
+  transform: translateX(0);
+  background-color: $white;
+
+  @media (max-width: map_get($breakpoints, "md")) {
+    flex: 0 0 100px;
+    max-width: 100px;
+    transform: translateX(0);
+  }
+
+  @media (max-width: map_get($breakpoints, "sm")) {
+    flex: 0 0 0;
+    max-width: 0px;
+    transform: translateX(-300px);
+  }
+
+  .nav-header {
+    @include flex-properties(flex, null, null, space-between, center);
+    padding: 40px;
+    padding-bottom: 50px;
+
+    @media (max-width: map_get($breakpoints, "md")) {
+      padding: 20px 0;
+      margin: 0 auto;
+    }
+
+    @media (max-width: map_get($breakpoints, "sm")) {
+      padding: 20px;
+      margin: 0;
+    }
+
+    .dismiss-toggler {
+      color: $gray;
+      display: none;
+    }
+  }
+
+  .nav-content {
+    @include flex-properties(flex, column, null, null, null);
+    flex-grow: 1;
+    @extend %h-100;
+    overflow: auto;
+    padding-bottom: 10px;
+  }
+
+  .nav {
+    padding: 0;
+    .nav-link {
+      display: block;
+      color: $dark;
+      padding: 10px 40px;
+      font-size: 15px;
+      font-weight: 500;
+      @include flex-properties(flex, null, null, null, center);
+
+      &.active,
+      &:hover,
+      &:active {
+        background-color: lighten($gray, 27%);
+        .nav-list-item {
+          color: $primary;
+        }
+        .nav-icon {
+          color: $primary;
+        }
+      }
+
+      .nav-list-item {
+        transform: translateX(0);
+        display: inline-block;
+        transition: all 0.5s ease-in-out;
+        margin: 0 12px;
+
+        @media (max-width: map_get($breakpoints, "md")) {
+          transform: translateX(-300px);
+          display: inline-block;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+
+      .nav-icon {
+        color: $gray;
+        width: 20px;
+        font-weight: 600;
+        font-size: 22px;
+        @media (max-width: map_get($breakpoints, "md")) {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  
+  .nav-footer {
+    @include flex-properties(flex, null, null, center, center);
+    background-color: $white;
+    padding-bottom: 20px;
+    display: block;
+
+    .nav-link {
+      display: block;
+      color: $dark;
+      padding: 10px 40px;
+      font-size: 15px;
+      font-weight: 500;
+      @include flex-properties(flex, null, null, null, center);
+    }
+
+    .nav-list-item {
+      margin: 0 12px;
+
+      @media (max-width: map_get($breakpoints, "md")) {
+        transform: translateX(-300px);
+        display: block;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+    .nav-icon {
+      color: $gray;
+      width: 20px;
+    }
+  }
+}

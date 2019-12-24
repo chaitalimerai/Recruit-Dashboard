@@ -1,0 +1,77 @@
+// Global styles goes here
+* {
+  box-sizing:       border-box;
+  padding:          0;
+  margin:           0;
+}
+
+html,
+body {
+  @extend %hw-100;
+  overflow: hidden;
+}
+
+body {
+  position:         relative;
+  font-family:      $font-family;
+  font-size:        $font-size;
+  font-weight:      $font-weight;
+  line-height:      $font-line-height;
+  background-color: $bg_color;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display:          none;
+}
+
+a {
+  text-decoration:  none;
+}
+
+button,
+a,
+label {
+  cursor:           pointer;
+  margin-bottom:    0;
+}
+
+ul {
+  margin:           0;
+  padding:          0;
+  list-style:       none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin:          0;
+}
+
+/*========Main Wrapper========*/
+#main-wrapper {
+  @extend %hw-100;
+  @include flex-properties(flex, row, null, null, null);
+}
+
+/*========Content Wrapper========*/
+#wrapper {
+  @extend %hw-100;
+  @include flex-properties(flex, column, null, null, null);
+}
+
+/*========Content Wrapper========*/
+#content-wrapper {
+  @extend %hw-100;
+  @include flex-properties(flex, column, null, null, null);
+  overflow:         auto;
+  padding:          0 60px 30px 60px;
+  @media (max-width: map_get($breakpoints, "md")) {
+    padding:        0 20px 30px 20px;
+  }
+}
+
+

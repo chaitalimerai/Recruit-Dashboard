@@ -1,0 +1,278 @@
+//Content-Body
+.content-body {
+  @include flex-properties(flex, column, null, null, null);
+  .row {
+    @include flex-properties(flex, column, null, null, null);
+    margin-left: -15px;
+    margin-right: -15px;
+
+    @media (min-width: map_get($breakpoints, "md")) {
+      @include flex-properties(flex, row, wrap, null, null);
+    }
+    .col {
+      margin-bottom: 20px;
+      padding: 0 15px;
+    }
+  }
+}
+
+.cards {
+  flex: 1;
+  .card-header {
+    @include flex-properties(flex, null, null, null, center);
+    position: relative;
+    .card-img {
+      position: relative;
+      img {
+        border-radius: 8px;
+        margin-right: 10px;
+        height: 60px;
+      }
+    }
+
+    .card-img::after {
+      content: "";
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #2dca73;
+      border: 2px solid #fff;
+      bottom: 4px;
+      right: 8px;
+    }
+
+    .header-right-content {
+      @include flex-properties(flex, column, null, space-between, space-between);
+      @extend %w-100;
+      .card-title {
+        color: $dark;
+        margin-bottom: 5px;
+      }
+
+      .badge {
+        background-color: lighten($danger, 38%);
+        padding: 2px;
+        width: 50px;
+        border-radius: 5px;
+        color: $danger;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        margin-right: 20px;
+      }
+
+      .vertical-line {
+        height: 25px;
+        width: 2px;
+        background-color: lighten($gray, 20%);
+        margin-right: 10px;
+      }
+
+      .sub-title {
+        color: $gray;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .card-content-body {
+    .rating-row {
+      @include flex-properties(flex, null, null, null, center);
+      margin-bottom: 5px;
+      .rating {
+        color: $dark;
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 15px;
+      }
+
+      .progressbar {
+        position: relative;
+        height: 3px;
+        width: 100px;
+        background-color: lighten($gray, 20%);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        &::after {
+          content: "";
+          height: 3px;
+          margin-right: 15px;
+          border-radius: 8px;
+          display: block;
+          position: absolute;
+        }
+      }
+
+      .progressbar-1 {
+        @include chart-upper-line(1, $success, 70px);
+      }
+      .progressbar-2 {
+        @include chart-upper-line(1, $warning, 50px);
+      }
+      .progressbar-3 {
+        @include chart-upper-line(1, $red, 30px);
+      }
+
+      .like-btn-label {
+        @include flex-properties(flex, null, null, center, center);
+        background-color: $white;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 1px solid lighten($gray, 20%);
+        box-shadow: 1px 2px 4px 2px lighten($primary, 40%);
+
+        .heart-icon {
+          color: $light_gray;
+        }
+      }
+      input[type="checkbox"]:checked + #like-btn-label1 .heart-icon:before,
+      input[type="checkbox"]:checked + #like-btn-label2 .heart-icon:before,
+      input[type="checkbox"]:checked + #like-btn-label3 .heart-icon:before,
+      input[type="checkbox"]:checked + #like-btn-label4 .heart-icon:before,
+      input[type="checkbox"]:checked + #like-btn-label5 .heart-icon:before,
+      input[type="checkbox"]:checked + #like-btn-label6 .heart-icon:before {
+        content: "\f004";
+        color: $danger;
+      }
+    }
+
+    .roles-row {
+      @include flex-properties(flex, column, null, null, null);
+
+      .card-sub-title {
+        color: $gray;
+        font-weight: 600;
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+    }
+    
+    .radio-group {
+      @include flex-properties(flex, null, wrap, null, null);
+      .role-options-label {
+        background-color: lighten($gray, 25%);
+        padding: 6px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        color: $gray;
+        border-radius: 3px;
+        white-space: nowrap;
+        font-size: 12px;
+        border: 1px solid lighten($gray, 25%);
+
+        &:hover,
+        &:active {
+          background-color: $white;
+          color: $dark;
+          border: 1px solid $gray;
+          box-shadow: 1px 2px 4px 2px lighten($primary, 40%);
+        }
+      }
+      input[type="radio"]:checked + .role-options-label {
+        background-color: $white;
+        color: $dark;
+        border: 1px solid $gray;
+        box-shadow: 1px 2px 4px 2px lighten($primary, 40%);
+      }
+    }
+
+    .ask-people-row {
+      @include flex-properties(flex, column, null, null, null);
+      .card-sub-title {
+        color: $gray;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin: 8px 0;
+      }
+
+      .client-list {
+        @include flex-properties(flex, null, null, space-between, center);
+        position: relative;
+        @extend %w-100;
+        margin-bottom: 20px;
+
+        .client-img {
+          border-radius: 50%;
+          height: 30px;
+          border: 2px solid $white;
+        }
+        .client-img-pos-1 {
+          position: absolute;
+          left: 20px;
+        }
+        .client-img-pos-2 {
+          position: absolute;
+          left: 40px;
+        }
+        .client-img-pos-3 {
+          position: absolute;
+          left: 60px;
+        }
+        .client-img-pos-4 {
+          position: absolute;
+          left: 80px;
+        }
+        .client-img-pos-5 {
+          position: absolute;
+          left: 80px;
+        }
+        .more-img {
+          @include flex-properties(flex, null, null, center, center);
+          position: absolute;
+          left: 80px;
+          background-color: rgba(0, 0, 0, 0.4);
+          height: 30px;
+          width: 30px;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 600;
+          border-radius: 50%;
+          border: 2px solid $white;
+        }
+        .client-title {
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  .card-footer {
+    .button-group {
+      @include flex-properties(flex, null, null, space-between, center);
+      margin-bottom: 10px;
+      .form-control {
+        border: 1px solid lighten($light_gray, 20%);
+        padding: 12px 15px;
+        border-radius: 5px;
+        font-weight: 700;
+        white-space: nowrap;
+        width: 100%;
+        color: $primary;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: $white;
+        margin-right: 10px;
+
+        &:hover,
+        &:active,
+        &.active {
+          background-color: darken($primary, 10%);
+          color: #fff;
+          outline: 0;
+        }
+      }
+      .form-control:last-child {
+        margin-right: 0;
+      }
+
+      .btn-large {
+        color: $gray;
+      }
+    }
+  }
+}

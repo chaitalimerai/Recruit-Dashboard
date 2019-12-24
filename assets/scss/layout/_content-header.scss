@@ -1,0 +1,152 @@
+.content-header {
+  @include flex-properties(flex, null, null, space-between, center);
+  margin: 30px 0;
+  padding: 0;
+
+  @media (max-width: map_get($breakpoints, "sm")) {
+    @include flex-properties(null, column, null, center, null);
+  }
+
+  .title {
+    color: $dark;
+  }
+
+  .filter-box {
+    @include flex-properties(flex, null, null, null, null);
+    @media (max-width: map_get($breakpoints, "sm")) {
+      @include flex-properties(flex, column, null, center, center);
+      padding: 10px 0;
+    }
+  }
+  
+  .shadow {
+    box-shadow: 1px 2px 4px 0px lighten($primary, 40%);
+  }
+
+  .dropdown {
+    @include flex-properties(flex, null, null, null, null);
+    position: relative;
+    margin-right: 20px;
+    @extend %w-100;
+
+    @media (max-width: map_get($breakpoints, "sm")) {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+
+    .dropdown-toggle {
+      height: 47px;
+      .user-profile {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+    }
+
+    .label-filter {
+      @include flex-properties(flex, null, null, space-between, center);
+      padding: 12px 20px;
+      background-color: $white;
+      border-left: 0;
+      color: $white;
+      font-weight: normal;
+      width: 140px;
+      border-radius: 4px;
+
+      @media (max-width: map_get($breakpoints, "sm")) {
+        width: 100%;
+      }
+
+      .filter-label-text {
+        margin-right: 10px;
+        color: $dark;
+        font-weight: 600;
+      }
+
+      .down-icon {
+        color: $gray;
+        font-size: 24px;
+      }
+    }
+
+    .dropdown-menu {
+      @extend %w-100;
+      display: none;
+      position: absolute;
+      top: 50px;
+      padding: 10px 10px 0 10px;
+      background-color: $white;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      box-shadow: 1px 2px 4px 0px lighten($primary, 40%);
+
+      .dropdown-item {
+        text-align: left;
+        color: $dark;
+        display: block;
+        padding-bottom: 8px;
+        font-weight: normal;
+        font-weight: 600;
+        &:hover,
+        &:active {
+          color: $gray;
+        }
+      }
+    }
+  }
+
+  #label-filter:checked {
+    & ~ .dropdown-menu {
+      display: block;
+      z-index: 10;
+    }
+    & ~ .label-filter .fa {
+      transform: rotate(180deg);
+    }
+  }
+
+  .radio-group {
+    background-color: lighten($primary, 42%);
+    border-radius: 8px;
+    padding: 8px;
+    width: 100%;
+    @include flex-properties(flex, null, null, space-between, center);
+
+    .display-grid-label {
+      margin-right: 20px;
+      padding: 5px 20px 5px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+
+      .grid-icon,
+      .grid-text {
+        color: $light-gray;
+      }
+     
+      &:hover,
+      &:active {
+        background-color: $white;
+        .grid-icon {
+          color: $primary;
+        }
+        .grid-text {
+          color: $dark;
+        }
+      }
+    }
+
+    .display-grid-label:last-child {
+      margin-right: 0;
+    }
+    input[type="radio"]:checked {
+      & + .display-grid-label {
+        background-color: $white;
+      }
+      & + .display-grid-label .grid-icon{
+        color: $primary;
+      }
+      & + .display-grid-label .grid-text{
+        color: $dark;
+      }
+    }
+  }
+}

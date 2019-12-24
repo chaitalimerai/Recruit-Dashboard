@@ -1,0 +1,37 @@
+// All the SCSS mixins goes here
+
+//Flex Properties Mixin
+@mixin flex-properties($flex, $flex-direction, $flex-wrap, $justify-content, $align-items) {
+  display: $flex;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// //Border
+// @mixin vertical-line($i) {
+//   @for $i from 1 through 3 {
+//     .progressbar-#{$i} {
+//       height: 3px;
+//       width: 100px;
+//       background-color: lighten($gray, 20%);
+//       border-radius: 8px;
+//       display: flex;
+//       align-items: center;
+//       position: relative;
+//     }
+//   }
+// }
+
+@mixin chart-upper-line($i, $color, $width) {
+  &::after {
+    content: "";
+    height: 3px;
+    width: $width;
+    background-color: $color;
+    border-radius: 8px;
+    display: block;
+    position: absolute;
+  }
+}

@@ -1,0 +1,19 @@
+// cards styles goes here
+.card {
+  @include flex-properties(flex, column, null, flex-start, null);
+  @extend %h-100;
+  width: 280px;
+  background-color: $white;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px 2px lighten($primary, 40%);
+
+  @media (max-width: map_get($breakpoints, "sm")) {
+    width: 100%;
+  }
+}
+.row .col {
+  &:last-child .card {
+    padding: 0;
+  }
+}
